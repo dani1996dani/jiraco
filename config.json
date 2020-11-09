@@ -1,0 +1,5 @@
+{
+  "directoryToJiraKey": {
+    "~/projects/jiraco": "JIC"
+  }
+}

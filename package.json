@@ -1,10 +1,10 @@
 {
-  "name": "jira-commiter",
+  "name": "jiraco",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "jira-commiter": "index.js"
+    "jiraco": "index.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "minimist": "^1.2.5"
   }
 }
