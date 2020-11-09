@@ -24,5 +24,8 @@ An example .jiraco file:
 ```
 ### Parameters 
 *jiraTicketKey* - The key jira appends to your project's tickets. For example, for a ticket id "ABS-123", the *jiraTicketKey* value should be "ABS".
+
 *searchUntilFound* - jiraco parses your branch name to automatically add the ticket id to your commit message. it will use the value from *jiraTicketKey* (including)
 to *searchUntilFound* (excluding).
+
+*emojiFaction* - what types of emojis will be used in your commit messages. Current available factions are "animals", "construction", "none". If you use "none", no emojis will be used.
