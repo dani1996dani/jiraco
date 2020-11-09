@@ -8,6 +8,8 @@ Clone the repository.
 
 Run `npm link`. The `jiraco` command will now be available globally.
 
+Create a `.jiraco` file (optional)
+
 # .jiraco File
 
 Create a `.jiraco` file in your project (jiraco will use the closest file it can find while searchin upwards in the directory tree).
