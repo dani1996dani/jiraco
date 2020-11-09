@@ -1,15 +1,17 @@
 const { exec } = require('child_process');
 const chalk = require('chalk');
+
 const { askQuestion } = require('./ask-question');
 const { getCommitPrefix } = require('./get-commit-prefix');
 const { printError } = require('./print-error');
 
-const commit = () => {
+const commit = (config) => {
     exec('git rev-parse --abbrev-ref HEAD', async(err, branchName, stderr) => {
         if (err) {
             printError(stderr);
         }
-        const commitPrefix = getCommitPrefix(branchName);
+        const { jiraTicketKey, emojiFaction } = config;
+        const commitPrefix = getCommitPrefix(branchName, jiraTicketKey, emojiFaction);
         const commitMessage = await askQuestion(chalk.bold.blueBright( "Your commit message: "));
 
         const fullCommitMessage = `${commitPrefix}\t${commitMessage}`;
