@@ -1,4 +1,4 @@
-const { CONSTRUCTION, ANIMALS } = require('./emoji-factions');
+const { CONSTRUCTION, ANIMALS, EVIL } = require('./emoji-factions');
 
 const getRandomInt = (min, max) => {
     min = Math.ceil(min);
@@ -16,6 +16,7 @@ const getEmojiCollectionPerFaction = (faction) => {
     switch (faction){
         case CONSTRUCTION: return constructionEmojis;
         case ANIMALS: return animalEmojis;
+        case EVIL: return evilEmojis;
         default: return [''];
     }
 }
@@ -27,6 +28,7 @@ const animalEmojis = [
     '🦈', '🦍', '🐂', '🐋', '🐌', '🐏',
     '🐐', '🐑', '🐔', '🐜', '🐢', '🐥'
 ];
+const evilEmojis = ['😈','😡', '🦹‍', '💢', '😤', '🤘', '👹', '🖕'];
 
 module.exports = {
   getRandomEmoji
